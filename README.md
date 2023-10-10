@@ -1,2 +1,3 @@
-# Semester.Project
-CIS 121 Group Project !
+# CIS121Project
+✿ Into to Programming - Group Project ✿ 
+
