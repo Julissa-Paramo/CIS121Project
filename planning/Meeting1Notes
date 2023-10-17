@@ -1,11 +1,14 @@
-flowers - dictionaries
-herbs
-fruits
+flowers ; dictionaries
+herbs ; 
+fruits ; 
 
-passage of time - loops
+passage of time ; loops
 
-weather and seasons - if statements
+weather and seasons ; if statements
 
 save quantity of plants in garden , quantity of seeds , and quantity 
 
 give status of garden after each season 
+
+
+user is given a certain number of seeds to begin with
