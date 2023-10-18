@@ -12,3 +12,19 @@ give status of garden after each season
 
 
 user is given a certain number of seeds to begin with
+
+
+dictionary 1 
+key = plant types
+value = list of ACTUAL plants
+
+
+
+flower : rose, 
+
+herbs : 
+
+fruits : strawberry,
+
+
+
