@@ -1,0 +1,23 @@
+#This function checks the season, starting at spring, and returns a list of plants that are able to be planted in that season
+def check_season(season, plant_list):
+
+    if season == "Spring":
+        in_season = plant_list["Spring"]
+    elif season == "Summer":
+        in_season = plant_list["Summer"]
+    elif season == "Autumn":
+        in_season = plant_list["Autumn"]
+    elif season == "Winter":
+        in_season = plant_list["Winter"]
+
+    return in_season
+
+#This function asks user if they want to plant a specific plant (within season) and plants it if they do want it
+def planting_seeds(season, plant_stage_dict):
+    in_season = check_season(season)
+
+    for plant in in_season: #for plant in list of plants for each season
+        want_to_plant = input(f"Do you want to plant {plant}(Y/N)? ")
+        if want_to_plant == "Y":
+            planting_list.append(want_to_plant)
+            plant_stage_dict[want_to_plant] = 0
