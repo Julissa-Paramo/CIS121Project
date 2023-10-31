@@ -1,0 +1,52 @@
+import keyboard
+import random
+
+''' DICTIONARY WAS CHANGED EDIT'''
+def seed_remover(plant,seed):
+    '''this function modifies a dictionary by removing the seed amount planted
+    from the appropiate plant'''
+ 
+    for key, value in seeds_dict.items(): # iterates through items in seeds_dict
+        if key == plant: # checks if key name matches the first parameter PLANT ( string )                          #use this to modify seed dict after planting
+           seed_dict[key] -= seed # changes the value of the key using the second parameter SEED
+    return seed_dict # returns modified dictionary , implement a loop if they want to plant more seeds ? ? ?
+
+def growth_stage(num): 
+    '''this function returns the value associated with key num in 
+      the growth dictionary
+    '''
+                                                                #use this to assign growth stage to a plant
+    for key, value in growth_dict.items():
+        if num == key:
+            return growth_dict[key]
+
+def weather(sunny_days, rainy_days):
+    
+    for i in range(5):
+      if sunny_days // 5 == i and rainy_days // 3 == i:
+        return (growth_stage(i))
+
+#dict containing plant type, plant and seed quantity                                        #dictionaries will either be simplified and/or replaced with classes for final project
+seed_dict = {"spring":{ 'tulip': 5, 'rosemary': 5, 'carrot': 5,},
+              "summer": {'rose': 5, 'thyme': 5, 'bokchoy': 5,},
+              "autumn": {'sunflower': 5, 'parsely': 5, 'corn': 5},
+              "winter": {'iris': 5, 'sage': 5, 'spinach': 5}}
+
+
+# dictionary containing the growth stages
+growth_dict = { 0: 'seed has been planted', 1: 'germination', 
+               2: 'plant has sprouted', 3: 'plant is a seedling',
+               4: 'plant', 5: 'plant with flower' }
+
+plant_stage_dict = {"rose":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},                                  #first int is the plant stage and second int is how many of the roses in this growth stage
+                    "sunflower":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "tulip":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "iris":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "thyme":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "rosemary":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "parsely":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "sage":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "carrot":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "corn":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "bokchoy":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0},
+                    "spinach":{0:0, 1:0, 2:0, 3:0, 4:0, 5:0}}
