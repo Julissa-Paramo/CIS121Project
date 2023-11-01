@@ -81,7 +81,3 @@ for season in seasons:
        proceed_with_growth(season, plant_list, plant_stage_dict)
     print_seasonal_info()
     input()
-
-
-
-            
