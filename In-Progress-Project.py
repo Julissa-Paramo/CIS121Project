@@ -22,7 +22,7 @@ def Season_Plant():
               "Summer": ['rose', 'thyme', 'bokchoy'],
               "Autumn": ['sunflower', 'parsley', 'corn'],
               "Winter": ['iris', 'sage', 'spinach']}
-    global season # variable added to global space
+    global season # variables added to global space
     global user_plant
     season = input('What season would you like to grow in?\nSpring, Summer, Autumn, Winter: ') # user's choice of season
     for key, value in season_dict.items():
@@ -38,7 +38,7 @@ def Season_Plant():
    
 def Sunshine_Water():
     '''This function gets sunshine and water amount from user'''
-    global water # variable added to global space
+    global water # variables added to global space
     global sunshine 
     water = int(input('How many water drops?: '))
     sunshine = int(input('How many rays of sunshine?: '))
@@ -71,33 +71,33 @@ class Plant():
         '''This method prompts user to adjust water amount if needed for full growth'''
         for key,value in plant_information.items():
             if key == self.Name: # finds the plant in the dictionary
-                status = True
-                while status == True:
+                status = False
+                while status == False:
                     if self.Water == plant_information[key][0]:# finds index 0 of the list in the plant_information dictionary
-                        status = False # loops ends if sufficient water has been added
+                        print('NICE! Perfect amount of water has been added . . .\n') 
+                        status = True # loops ends if sufficient water has been added
                     elif self.Water > plant_information[key][0]:
                         self.Water = int(input('Too much water! Try again.\nHow many drops of water?: ')) # sets the class attribute Water to the new amount
                     elif self.Water < plant_information[key][0]:
                         self.Water = int(input('Not enough water! Try again.\nHow many drops of water?: '))
-                return 'NICE! Perfect amount of water has been added . . .\n'
-
+                return None
 
 
     def Calc_Sunshine(self):
         '''This method prompts user to adjust sunshine amount if needed for full growth'''
         for key,value in plant_information.items():
             if key == self.Name: # finds the plant in the dictionary
-                status = True
-                while status == True:
+                status = False
+                while status == False:
                     if self.Sunshine == plant_information[key][1]:# finds index 1 of the list in the plant_information dictionary
-                        status = False # loops end if sufficient sunshine has been added
-                    if self.Sunshine > plant_information[key][1]:
+                        print('AWESOME! Perfect amount of sunshine has been added . . .')
+                        status = True # loops end if sufficient sunshine has been added
+                    elif self.Sunshine > plant_information[key][1]:
                         self.Sunshine = int(input('Too much sunlight! Try again.\nHow many drops of water?: ')) # sets the class attribute Sunshine to the new amount
                     elif self.Sunshine < plant_information[key][1]:
                         self.Sunshine = int(input('Not enough sunshine! Try again.\nHow many rays of sunshine?: '))
-
-        
-
+                return None
+    
 print(Greeting())
 print(Season_Plant())
 print(Sunshine_Water())
@@ -105,3 +105,4 @@ plant_object = Plant(user_plant,season,water,sunshine)
 plant_object.Calc_Water()
 plant_object.Calc_Sunshine()
 print(plant_object)
+
