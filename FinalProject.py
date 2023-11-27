@@ -71,7 +71,7 @@ class Plant():
                 status = False
                 while status == False:
                     if self.Water == plant_information[key][0]:# finds index 0 of the list in the plant_information dictionary
-                        print('NICE! Perfect amount of water has been added . . .\n') 
+                        print('\nNICE! Perfect amount of water has been added . . .\n') 
                         status = True # loops ends if sufficient water has been added
                     elif self.Water > plant_information[key][0]:
                         self.Water = int(input('Too much water! Try again.\nHow many drops of water?: ')) # sets the class attribute Water to the new amount
@@ -113,5 +113,6 @@ plant_object.Calc_Water()
 plant_object.Calc_Sunshine()
 print(plant_object)
 plant_object.Report_Stats()
+
 
 
