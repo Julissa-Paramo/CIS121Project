@@ -95,12 +95,12 @@ class Plant():
     def Report_Stats(self):
         import csv
         report_stats = input('\nWould you like a copy of your data? Y/N: ')
-        if report_stats == 'Y' or report_stats == 'y':
+        if report_stats == 'Y' or report_stats == 'y': # condition if user wants their data written to a new file
             row1 = ['plant','season','water','sunshine']
             row2 = [self.Name,self.Season,self.Water,self.Sunshine]
-            with open ('GardenStats.csv','w') as GardenStats:
+            with open ('GardenStats.csv','w') as GardenStats: # creates new csv file GardenStats
                 GardenStatswriter = csv.writer(GardenStats)
-                GardenStatswriter.writerows([row1,row2])
+                GardenStatswriter.writerows([row1,row2]) # writes each row variable to the new csv file
             print('Your data has been saved. Thanks for playing!')
         else:
             print('Thanks for playing!')
@@ -108,8 +108,9 @@ class Plant():
 print(Greeting())
 print(Season_Plant())
 print(Sunshine_Water())
-plant_object = Plant(user_plant,season,water,sunshine)
+plant_object = Plant(user_plant,season,water,sunshine) # creates Plant object from the global variables 
 plant_object.Calc_Water()
 plant_object.Calc_Sunshine()
 print(plant_object)
 plant_object.Report_Stats()
+
