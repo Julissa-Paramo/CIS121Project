@@ -1,5 +1,5 @@
 '''
-Julissa, Adelynnn, Adriana
+Julissa Paramo, Adelynn Vang, Adriana Seda
 11/21/23
 Final Project
 '''
@@ -113,4 +113,5 @@ plant_object.Calc_Water()
 plant_object.Calc_Sunshine()
 print(plant_object)
 plant_object.Report_Stats()
+
 
