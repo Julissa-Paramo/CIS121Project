@@ -63,15 +63,10 @@ class Plant():
         return self.Water
     def get_Sunshine(self):
         return self.Sunshine
-    def set_Water(self,new_Water):
-        self.Water = new_Water
     def __str__(self):
         return f'Congratulations! You planted: {self.Name}'
-    def set_Sunshine(self,new_Sunshine):
-        self.Sunshine = new_Sunshine
+
     
-
-
     def Calc_Water(self):
         '''This method prompts user to adjust water amount if needed for full growth'''
         for key,value in plant_information.items():
